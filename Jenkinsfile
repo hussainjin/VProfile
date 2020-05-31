@@ -6,6 +6,7 @@ pipeline {
     stages{
        stage('code cloning'){
          steps{
+             sh 'rm -rf node-app'
             sh 'git clone https://github.com/anilkumarpuli/node-app.git'
                }
            }

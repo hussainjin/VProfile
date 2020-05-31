@@ -23,7 +23,7 @@ pipeline {
         }
         stage('DockerHub Push'){
             steps{
-    withCredentials([string(credentialsId: 'docker-image', variable: 'docker-image')]) {
+    withCredentials([string(credentialsId: 'docker-image1', variable: 'docker-image1')]) {
     sh "docker login -u anilkumblepuli -p ${docker-image}"
     sh "docker push anilkumblepuli/vprofile1:${DOCKER_TAG}"
                 }

@@ -23,8 +23,8 @@ pipeline {
         }
         stage('DockerHub Push'){
             steps{
-   withCredentials([string(credentialsId: 'docker-hub', variable: 'docker-hub')]) {
-    sh "docker login -u anilkumblepuli -p ${docker-hub}"
+withCredentials([string(credentialsId: 'docker-tub1', variable: 'docker-tub')]) {
+    sh "docker login -u anilkumblepuli -p ${docker-tub}"
     sh "docker push anilkumblepuli/vprofile1:${DOCKER_TAG}"
                 }
             }
